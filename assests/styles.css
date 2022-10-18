@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+  }
+  
+  .container {
+    background-color: rgb(123, 77, 165);
+    color: rgb(247, 246, 248);
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .result {
+    background-color: rgb(72, 53, 90);
+    text-align: center;
+  }
+  input {
+    display: inline;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+.card-body {
+    justify-content: center;
+    text-align: center
+}
+
+h1 {
+    justify-content: center;
+}
+
+.text-id {
+    justify-content: center;
+    text-align: center;
+}
+h2 {
+    justify-content: center;
+    text-align: center;
+}
+.wrapper {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+input {
+    display: inline;
+}
+
+.title {
+    text-align: center;
+}
+.result-container {
+    justify-content: center;
+    text-align: center;
+}
+
