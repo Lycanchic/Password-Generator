@@ -4,7 +4,7 @@
 **Password Generator** is an application built using HTML, CSS, JS and prettier.
 
 
-## Images of the deployed website:
+## Images of the deployed app:
 ***
 
 ## Home Page
