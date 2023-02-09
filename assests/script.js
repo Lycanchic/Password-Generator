@@ -1,4 +1,4 @@
-var generateBtn = document.querySelector("#generate");
+const generateBtn = document.querySelector("#generate");
 
 function randomInt(min, max) {
     if (!max) {
@@ -25,7 +25,7 @@ function generatePassword() {
         return
     }
 
-    if (passwordLength < 8 || passwordLength > 128) {
+    if (!(passwordLength >= 8 && passwordLength <= 128)) {
         window.alert("Password length must be between 8 and 128 characters")
         return
     }
@@ -42,35 +42,35 @@ function generatePassword() {
 
     var includedOptions = []
     
-    for (var i = 0; i < lowercaseList.length; i++) {
+    for (let i = 0; i < lowercaseList.length; i++) {
         uppercaseList[i] = lowercaseList[i].toUpperCase()
     }
-    
-    if (includeNumbers === true) {
+
+    if (includeNumbers) {
         includedOptions.push(numbersList)
     }
 
-    if (includeSpecialCharacters === true) {
+    if (includeSpecialCharacters) {
         includedOptions.push(specialCharactersList)
     }
 
-    if (includeLowercaseLetters === true) {
+    if (includeLowercaseLetters) {
         includedOptions.push(lowercaseList)
     }
 
-    if (includeUppercaseLetters === true) {
+    if (includeUppercaseLetters) {
         includedOptions.push(uppercaseList)
     }
     
-    if (includedOptions.length === 0) {
+    if (includedOptions.length) {
         includedOptions.push(lowercaseList)
     }
  
     var generatedPassword = ""
 
-    for (var i = 0; i < passwordLength; i++) {
-    var randomList = getRandomItem(includedOptions)
-    var randomChar = getRandomItem(randomList)
+    for (let i = 0; i < passwordLength; i++) {
+    const randomList = getRandomItem(includedOptions)
+    const randomChar = getRandomItem(randomList)
     generatedPassword += randomChar
 }
     
@@ -86,4 +86,3 @@ function generatePassword() {
 }
 
 generateBtn.addEventListener('click', writePassword);
-
