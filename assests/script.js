@@ -1,6 +1,6 @@
 const generateBtn = document.querySelector("#generate");
 
-function randomInt(min, max = min) {
+function randomInt(min, max ) {
     if (!max) {
         max = min
         min = 0
@@ -20,7 +20,7 @@ function generatePassword() {
 
     const passwordLength = Number.parseInt(userInput, 10)
     
-    if (Number.isNaN (passwordLength)) {
+    if (isNaN (passwordLength)) {
         window.alert("Please enter a number")
         return
     }
@@ -30,17 +30,17 @@ function generatePassword() {
         return
     }
 
-    const includeNumbers = window.confirm("Would you like to include Numbers in your password?")
-    const includeUppercaseLetters = window.confirm("Would you like to include Uppercase letters in your password?")
-    const includeLowercaseLetters = window.confirm("Would you like to include Lowercase Letters in your password?")
-    const includeSpecialCharacters = window.confirm("Would you like to include Special Characters in your password?")
+     includeNumbers = window.confirm("Would you like to include Numbers in your password?")
+     includeUppercaseLetters = window.confirm("Would you like to include Uppercase letters in your password?")
+     includeLowercaseLetters = window.confirm("Would you like to include Lowercase Letters in your password?")
+     includeSpecialCharacters = window.confirm("Would you like to include Special Characters in your password?")
     
-    const numbersList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
-    const specialCharactersList = ["!", "@", "#", "$", "%", "^", "&", "*", "+"]
-    const lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j","k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-    const uppercaseList = []
+     numbersList = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+     specialCharactersList = ["!", "@", "#", "$", "%", "^", "&", "*", "+"]
+     lowercaseList = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j","k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+     uppercaseList = []
 
-    const includedOptions = []
+     includedOptions = []
     
     for (let i = 0; i < lowercaseList.length; i++) {
         uppercaseList[i] = lowercaseList[i].toUpperCase()
@@ -66,7 +66,7 @@ function generatePassword() {
         includedOptions.push(lowercaseList)
     }
  
-    const generatedPassword = ""
+     generatedPassword = ""
 
     for (let i = 0; i < passwordLength; i++) {
     const randomList = getRandomItem(includedOptions)
@@ -78,8 +78,8 @@ function generatePassword() {
 }
 
     function writePassword() {
-    const password = generatePassword();
-    const passwordText = document.querySelector("#password");
+     password = generatePassword();
+     passwordText = document.querySelector("#password");
 
     passwordText.value = password;
 
