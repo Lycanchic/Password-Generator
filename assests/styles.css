@@ -3,7 +3,7 @@
     background-color: rgb(136, 99, 172);
  }
   
-.container {
+.PW-container {
     color: rgb(247, 246, 248);
     display: block;
     width: 100%;
@@ -11,7 +11,8 @@
 }
 
 button {
-  background-color: white;
+  background-color: rgb(150, 96, 201);
+  color: white;
 }
 
 input {
