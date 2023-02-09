@@ -29,27 +29,32 @@
 
 
 ## User Story
-***
-{user story context}
 
-## As a " ":
-*I would like to search for plants types, that fit my lifestyle, personal interests and or needs.*
-***
-   **SEARCH** for the plant I have in my home, to correctly identify its species, care needs, the toxicity level.
+```
+AS AN employee with access to sensitive data
+I WANT to randomly generate a password that meets certain criteria
+SO THAT I can create a strong password that provides greater security
+```
 
-   **LEARN** about the healing properties of hollistic plants 
+## Acceptance Criteria
 
-   **DISCOVER** the plants that are best for me, based on my astrological sign.
- 
-
- *I would like to save my profile, zodiac sign and personal plant interests*
- ***
-   
-   **SAVE** my profile info i.e username, email address and zodiac sign
-
-   **SELECT** which plant subjects interest me (indoor, outdoor, gardening, herbology, toxicity or hollistic) 
- 
-
+```
+GIVEN I need a new, secure password
+WHEN I click the button to generate a password
+THEN I am presented with a series of prompts for password criteria
+WHEN prompted for password criteria
+THEN I select which criteria to include in the password
+WHEN prompted for the length of the password
+THEN I choose a length of at least 8 characters and no more than 128 characters
+WHEN asked for character types to include in the password
+THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters
+WHEN I answer each prompt
+THEN my input should be validated and at least one character type should be selected
+WHEN all prompts are answered
+THEN a password is generated that matches the selected criteria
+WHEN the password is generated
+THEN the password is either displayed in an alert or written to the page
+```
   ## Features
   ***
   
@@ -84,12 +89,6 @@
   **Future iterations**
     Adding a feature that securely saves your previous passwords incase you forget it. 
 
-  ## CREDITS
-  ***
-
-  **Collaborators**
-  1. Marie Pacheco github: https://github.com/Lycanchic
-  
-
+ 
 - - -
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
